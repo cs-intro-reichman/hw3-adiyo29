@@ -46,7 +46,7 @@ public class LoanCalc {
 		iterationCounter = 0;
 		double payment = (int) (loan / (double) (n));
 		int endBalance = 10000;
-		double incerment = epsilon / 10;
+		double incerment = 1;
 		while (Math.abs(endBalance) >= epsilon) {
 			payment = payment + incerment;
 			endBalance = (int) endBalance (loan, rate, n, payment);
