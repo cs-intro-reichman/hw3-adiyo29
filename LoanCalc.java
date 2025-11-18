@@ -36,7 +36,8 @@ public class LoanCalc {
 			loan = endBalance;
 		}
 		return endBalance;
-	}	
+	}
+	
 	// Uses sequential search to compute an approximation of the periodical payment
 	// that will bring the ending balance of a loan close to 0.
 	// Given: the sum of the loan, the periodical interest rate (as a percentage),
@@ -46,7 +47,7 @@ public class LoanCalc {
 		iterationCounter = 0;
 		double payment = (int) (loan / (double) (n));
 		int endBalance = 10000;
-		double incerment = 1;
+		double incerment = epsilon;
 		while (Math.abs(endBalance) >= epsilon) {
 			payment = payment + incerment;
 			endBalance = (int) endBalance (loan, rate, n, payment);
